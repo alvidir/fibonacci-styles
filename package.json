@@ -1,0 +1,19 @@
+{
+  "name": "fibonacci-styles",
+  "version": "1.0.0",
+  "description": "A set of scss styles that obey the fibonacci's succession",
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvidir/fibonacci-styles.git"
+  },
+  "author": "Hector Morales Carnice",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alvidir/fibonacci-styles/issues"
+  },
+  "homepage": "https://github.com/alvidir/fibonacci-styles#readme"
+}

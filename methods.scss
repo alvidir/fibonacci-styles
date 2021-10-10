@@ -1,0 +1,26 @@
+/// @type Function
+@function fib($it, $bound) {
+    $f: 1;
+    $f1: 1;
+    $f2: 1;
+    @if $it < 2 {
+        @return $f
+    };
+
+    @for $i from 1 through $it {
+        $f: $f1 + $f2;
+        @if $f > 0 and $f >= $bound {
+            @return $f
+        };
+
+        $f1: $f2 !global;
+        $f2: $f !global;
+    }
+
+    @return $f;
+}
+
+/// @type Function
+@function blend($red, $green, $blue) {
+    @return rgb(red($red), green($green), blue($blue));
+}
