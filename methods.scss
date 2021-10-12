@@ -1,18 +1,14 @@
-/// @type Function
-@function fib($it, $bound) {
-    $f: 1;
-    $f1: 1;
-    $f2: 1;
+@function fib($it, $base) {
+    $f: 0;
+    
+    $f1: 0;
+    $f2: $base;
     @if $it < 2 {
-        @return $f
+        @return $base
     };
 
     @for $i from 1 through $it {
-        $f: $f1 + $f2;
-        @if $f > 0 and $f >= $bound {
-            @return $f
-        };
-
+        $f: $f1 + $f2 !global;
         $f1: $f2 !global;
         $f2: $f !global;
     }
@@ -20,7 +16,19 @@
     @return $f;
 }
 
-/// @type Function
+@function sqrt($r) {
+    $x0: 1;
+    $x1: $x0;
+   
+    @for $i from 1 through 10 {
+      $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+      $x0: $x1;
+    }
+   
+    @return $x1;
+}
+
+
 @function blend($red, $green, $blue) {
     @return rgb(red($red), green($green), blue($blue));
 }

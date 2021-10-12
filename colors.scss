@@ -1,0 +1,169 @@
+@import "units.scss";
+@import "methods.scss";
+
+$color-palette: (
+    gray: (
+        low: (
+            1: rgb($fib-1, $fib-1, $fib-1), // 0x01
+            2: rgb($fib-2, $fib-2, $fib-2), // 0x02
+            3: rgb($fib-3, $fib-3, $fib-3), // 0x03
+            4: rgb($fib-4, $fib-4, $fib-4), // 0x05
+            5: rgb($fib-5, $fib-5, $fib-5), // 0x08
+            6: rgb($fib-6, $fib-6, $fib-6), // 0x0d
+            7: rgb($fib-7, $fib-7, $fib-7), // 0x15
+            8: rgb($fib-8, $fib-8, $fib-8), // 0x22
+            9: rgb($fib-9, $fib-9, $fib-9), // 0x37
+            10: rgb($fib-10, $fib-10, $fib-10), // 0x59
+            11: rgb($fib-11, $fib-11, $fib-11), // 0x90
+            12: rgb($fib-12, $fib-12, $fib-12), // 0xe9
+        ),
+
+        high: (
+            1: rgb($BYTE_MAX - $fib-1, $BYTE_MAX - $fib-1, $BYTE_MAX - $fib-1), // 0xfe
+            2: rgb($BYTE_MAX - $fib-2, $BYTE_MAX - $fib-2, $BYTE_MAX - $fib-2), // 0xfd
+            3: rgb($BYTE_MAX - $fib-3, $BYTE_MAX - $fib-3, $BYTE_MAX - $fib-3), // 0xfc
+            4: rgb($BYTE_MAX - $fib-4, $BYTE_MAX - $fib-4, $BYTE_MAX - $fib-4), // 0xfa
+            5: rgb($BYTE_MAX - $fib-5, $BYTE_MAX - $fib-5, $BYTE_MAX - $fib-5), // 0xf7
+            6: rgb($BYTE_MAX - $fib-6, $BYTE_MAX - $fib-6, $BYTE_MAX - $fib-6), // 0xf2
+            7: rgb($BYTE_MAX - $fib-7, $BYTE_MAX - $fib-7, $BYTE_MAX - $fib-7), // 0xea
+            8: rgb($BYTE_MAX - $fib-8, $BYTE_MAX - $fib-8, $BYTE_MAX - $fib-8), // 0xdd
+            9: rgb($BYTE_MAX - $fib-9, $BYTE_MAX - $fib-9, $BYTE_MAX - $fib-9), // 0xc8
+            10: rgb($BYTE_MAX - $fib-10, $BYTE_MAX - $fib-10, $BYTE_MAX - $fib-10), // 0xa6
+            11: rgb($BYTE_MAX - $fib-11, $BYTE_MAX - $fib-11, $BYTE_MAX - $fib-11), // 0x6f
+            12: rgb($BYTE_MAX - $fib-12, $BYTE_MAX - $fib-12, $BYTE_MAX - $fib-12), // 0x16
+        ),
+    ),
+
+    red: (
+        low: (
+            1: rgb($fib-1, 0, 0), // 0x01
+            2: rgb($fib-2, 0, 0), // 0x02
+            3: rgb($fib-3, 0, 0), // 0x03
+            4: rgb($fib-4, 0, 0), // 0x05
+            5: rgb($fib-5, 0, 0), // 0x08
+            6: rgb($fib-6, 0, 0), // 0x0d
+            7: rgb($fib-7, 0, 0), // 0x15
+            8: rgb($fib-8, 0, 0), // 0x22
+            9: rgb($fib-9, 0, 0), // 0x37
+            10: rgb($fib-10, 0, 0), // 0x59
+            11: rgb($fib-11, 0, 0), // 0x90
+            12: rgb($fib-12, 0, 0), // 0xe9
+        ),
+
+        high: (
+            1: rgb($BYTE_MAX - $fib-1, 0, 0), // 0xfe
+            2: rgb($BYTE_MAX - $fib-2, 0, 0), // 0xfd
+            3: rgb($BYTE_MAX - $fib-3, 0, 0), // 0xfc
+            4: rgb($BYTE_MAX - $fib-4, 0, 0), // 0xfa
+            5: rgb($BYTE_MAX - $fib-5, 0, 0), // 0xf7
+            6: rgb($BYTE_MAX - $fib-6, 0, 0), // 0xf2
+            7: rgb($BYTE_MAX - $fib-7, 0, 0), // 0xea
+            8: rgb($BYTE_MAX - $fib-8, 0, 0), // 0xdd
+            9: rgb($BYTE_MAX - $fib-9, 0, 0), // 0xc8
+            10: rgb($BYTE_MAX - $fib-10, 0, 0), // 0xa6
+            11: rgb($BYTE_MAX - $fib-11, 0, 0), // 0x6f
+            12: rgb($BYTE_MAX - $fib-12, 0, 0), // 0x16
+        ),
+    ),
+
+    green: (
+        low: (
+            1: rgb(0, $fib-1, 0), // 0x01
+            2: rgb(0, $fib-2, 0), // 0x02
+            3: rgb(0, $fib-3, 0), // 0x03
+            4: rgb(0, $fib-4, 0), // 0x05
+            5: rgb(0, $fib-5, 0), // 0x08
+            6: rgb(0, $fib-6, 0), // 0x0d
+            7: rgb(0, $fib-7, 0), // 0x15
+            8: rgb(0, $fib-8, 0), // 0x22
+            9: rgb(0, $fib-9, 0), // 0x37
+            10: rgb(0, $fib-10, 0), // 0x59
+            11: rgb(0, $fib-11, 0), // 0x90
+            12: rgb(0, $fib-12, 0), // 0xe9
+        ),
+
+        high: (
+            1: rgb(0, $BYTE_MAX - $fib-1, 0), // 0xfe
+            2: rgb(0, $BYTE_MAX - $fib-2, 0), // 0xfd
+            3: rgb(0, $BYTE_MAX - $fib-3, 0), // 0xfc
+            4: rgb(0, $BYTE_MAX - $fib-4, 0), // 0xfa
+            5: rgb(0, $BYTE_MAX - $fib-5, 0), // 0xf7
+            6: rgb(0, $BYTE_MAX - $fib-6, 0), // 0xf2
+            7: rgb(0, $BYTE_MAX - $fib-7, 0), // 0xea
+            8: rgb(0, $BYTE_MAX - $fib-8, 0), // 0xdd
+            9: rgb(0, $BYTE_MAX - $fib-9, 0), // 0xc8
+            10: rgb(0, $BYTE_MAX - $fib-10, 0), // 0xa6
+            11: rgb(0, $BYTE_MAX - $fib-11, 0), // 0x6f
+            12: rgb(0, $BYTE_MAX - $fib-12, 0), // 0x16
+        ),
+    ),
+
+    blue: (
+        low: (
+            1: rgb(0, 0, $fib-1), // 0x01
+            2: rgb(0, 0, $fib-2), // 0x02
+            3: rgb(0, 0, $fib-3), // 0x03
+            4: rgb(0, 0, $fib-4), // 0x05
+            5: rgb(0, 0, $fib-5), // 0x08
+            6: rgb(0, 0, $fib-6), // 0x0d
+            7: rgb(0, 0, $fib-7), // 0x15
+            8: rgb(0, 0, $fib-8), // 0x22
+            9: rgb(0, 0, $fib-9), // 0x37
+            10: rgb(0, 0, $fib-10), // 0x59
+            11: rgb(0, 0, $fib-11), // 0x90
+            12: rgb(0, 0, $fib-12), // 0xe9
+        ),
+
+        high: (
+            1: rgb(0, 0, $BYTE_MAX - $fib-1), // 0xfe
+            2: rgb(0, 0, $BYTE_MAX - $fib-2), // 0xfd
+            3: rgb(0, 0, $BYTE_MAX - $fib-3), // 0xfc
+            4: rgb(0, 0, $BYTE_MAX - $fib-4), // 0xfa
+            5: rgb(0, 0, $BYTE_MAX - $fib-5), // 0xf7
+            6: rgb(0, 0, $BYTE_MAX - $fib-6), // 0xf2
+            7: rgb(0, 0, $BYTE_MAX - $fib-7), // 0xea
+            8: rgb(0, 0, $BYTE_MAX - $fib-8), // 0xdd
+            9: rgb(0, 0, $BYTE_MAX - $fib-9), // 0xc8
+            10: rgb(0, 0, $BYTE_MAX - $fib-10), // 0xa6
+            11: rgb(0, 0, $BYTE_MAX - $fib-11), // 0x6f
+            12: rgb(0, 0, $BYTE_MAX - $fib-12), // 0x16
+        ),
+    ),
+);
+
+@function get-color($color, $tone, $base: low) {
+    @if $base != low and $base != high {
+        $base: low !global;
+    }
+
+    @if $tone < 1 {
+        @return map-get(map-get(map-get($color-palette, $color), $base), 1);
+    } @else if $tone > 12 {
+        @return map-get(map-get(map-get($color-palette, $color), $base), 12);
+    };
+
+    @return map-get(map-get(map-get($color-palette, $color), $base), $tone);
+}
+
+@function find-color($name) {
+    @return map-get($tagged-colors, $name);
+}
+
+@function get-theme($name, $theme: default) {
+    @return map-get($theme-colors, $name);
+}
+
+$tagged-colors: (
+    error: blend(get-color(red, 8, high), get-color(green, 10), get-color(blue, 11, high)),
+    success: blend(get-color(red, 9), get-color(green, 10, high), get-color(blue, 10)),
+    accent: blend(get-color(red, 9), get-color(green, 11), get-color(blue, 9, high)),
+    emphasis: blend(get-color(red, 11, high), get-color(green, 10), get-color(blue, 11)),
+);
+
+$theme-colors: (
+    font: (
+        default: get-color(gray, 8, high),
+        light: get-color(gray, 8, high),
+        dark: get-color(gray, 9),
+    ),
+);

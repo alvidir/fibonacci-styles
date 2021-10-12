@@ -1,0 +1,27 @@
+@import "sizes.scss";
+
+.rcorner {
+    $corner-radius: get-shape-size(radius);
+    border-radius: $corner-radius;
+  
+    &.left-only {
+      border-radius: $corner-radius 0 0 $corner-radius;
+      border-right: none !important;
+    }
+  
+    &.right-only {
+        border-radius: 0 $corner-radius $corner-radius 0;
+        border-left: none !important;
+    }
+  
+    &.top-only {
+        border-radius: $corner-radius $corner-radius 0 0;
+        border-bottom: none !important;
+    }
+  
+    &.bottom-only {
+        border-radius: 0 0 $corner-radius $corner-radius;
+        border-top: none !important;
+    }
+  }
+  
