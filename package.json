@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/alvidir/fibonacci-styles.git"
   },
+  "keywords": [
+    "fibonacci",
+    "styles",
+    "scss",
+    "colors",
+    "ratios"
+  ],
   "author": "Hector Morales Carnice",
   "license": "MIT",
   "bugs": {
