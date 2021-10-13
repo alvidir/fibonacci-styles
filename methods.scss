@@ -1,10 +1,10 @@
-@function fib($it, $base) {
+@function fib($it, $unit: 1) {
     $f: 0;
     
     $f1: 0;
-    $f2: $base;
+    $f2: 1;
     @if $it < 2 {
-        @return $base
+        @return $f
     };
 
     @for $i from 1 through $it {
@@ -13,7 +13,7 @@
         $f2: $f !global;
     }
 
-    @return $f;
+    @return $f * $unit;
 }
 
 @function sqrt($r) {
