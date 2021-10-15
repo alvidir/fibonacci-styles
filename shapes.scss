@@ -2,7 +2,7 @@
 
 .round-corners {
     // border-radius by default
-    border-radius: ($fib-5 * 1px);
+    border-radius: $fib-5 * 1px;
 
     @mixin round-corners-options {
         @each $it, $value in $fib {
