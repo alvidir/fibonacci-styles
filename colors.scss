@@ -150,6 +150,7 @@ $color-palette: (
     success: blend(get-fib-color(red, 9), get-fib-color(green, 10, high), get-fib-color(blue, 10)),
     accent: blend(get-fib-color(red, 9), get-fib-color(green, 11), get-fib-color(blue, 9, high)),
     emphasis: blend(get-fib-color(red, 11, high), get-fib-color(green, 10), get-fib-color(blue, 11)),
+    disabled: get-fib-color(grey, 11),
 );
 
 @function find-fib-color($name) {
