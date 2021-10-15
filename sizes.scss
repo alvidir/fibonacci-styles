@@ -9,16 +9,8 @@ $font-sizes: (
     giant: $fib-9 * 1px,
 );
 
-$shape-sizes: (
-    radius: $fib-4 * 1px,
-);
-
 @function get-font-size($size: regular) {
     @return map-get($font-sizes, $size);
-}
-
-@function get-shape-size($shape) {
-    @return map-get($shape-sizes, $shape);
 }
 
 @function golden-ratio($size, $opt: asc) {
@@ -27,5 +19,4 @@ $shape-sizes: (
     } @else {
         @return 2 * $size / (1 + sqrt(5));
     }
-    
 }

@@ -1,7 +1,7 @@
 @import "units.scss";
 @import "methods.scss";
 
-$color-palette: (
+$fibonacci-colors: (
     gray: (
         low: (
             1: rgb($fib-1, $fib-1, $fib-1), // 0x01
@@ -131,39 +131,39 @@ $color-palette: (
     ),
 );
 
-@function get-color($color, $tone, $base: low) {
+@function get-fib-color($color, $tone, $base: low) {
     @if $base != low and $base != high {
         $base: low !global;
     }
 
     @if $tone < 1 {
-        @return map-get(map-get(map-get($color-palette, $color), $base), 1);
+        @return map-get(map-get(map-get($fibonacci-colors, $color), $base), 1);
     } @else if $tone > 12 {
-        @return map-get(map-get(map-get($color-palette, $color), $base), 12);
+        @return map-get(map-get(map-get($fibonacci-colors, $color), $base), 12);
     };
 
-    @return map-get(map-get(map-get($color-palette, $color), $base), $tone);
+    @return map-get(map-get(map-get($fibonacci-colors, $color), $base), $tone);
 }
 
-@function find-color($name) {
-    @return map-get($tagged-colors, $name);
-}
-
-@function get-theme($name, $theme: default) {
-    @return map-get($theme-colors, $name);
-}
-
-$tagged-colors: (
-    error: blend(get-color(red, 8, high), get-color(green, 10), get-color(blue, 11, high)),
-    success: blend(get-color(red, 9), get-color(green, 10, high), get-color(blue, 10)),
-    accent: blend(get-color(red, 9), get-color(green, 11), get-color(blue, 9, high)),
-    emphasis: blend(get-color(red, 11, high), get-color(green, 10), get-color(blue, 11)),
+$color-palette: (
+    error: blend(get-fib-color(red, 8, high), get-fib-color(green, 10), get-fib-color(blue, 11, high)),
+    success: blend(get-fib-color(red, 9), get-fib-color(green, 10, high), get-fib-color(blue, 10)),
+    accent: blend(get-fib-color(red, 9), get-fib-color(green, 11), get-fib-color(blue, 9, high)),
+    emphasis: blend(get-fib-color(red, 11, high), get-fib-color(green, 10), get-fib-color(blue, 11)),
 );
+
+@function find-fib-color($name) {
+    @return map-get($color-palette, $name);
+}
 
 $theme-colors: (
     font: (
-        default: get-color(gray, 8, high),
-        light: get-color(gray, 8, high),
-        dark: get-color(gray, 9),
+        default: get-fib-color(gray, 8, high),
+        light: get-fib-color(gray, 8, high),
+        dark: get-fib-color(gray, 9),
     ),
 );
+
+@function get-fib-theme($name, $theme: default) {
+    @return map-get($theme-colors, $name);
+}
