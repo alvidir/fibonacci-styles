@@ -1,31 +1,36 @@
 @import "sizes.scss";
-  
-@mixin rcorner-fib-list {
-    @each $it, $value in $fib {
-        .rcorner-fib-#{$it} {
-            border-radius: ($value * 1px);
-          
-            &.left-only {
-              border-radius: ($value * 1px) 0 0 ($value * 1px);
-              border-right: none !important;
-            }
-          
-            &.right-only {
-                border-radius: 0 ($value * 1px) ($value * 1px) 0;
-                border-left: none !important;
-            }
-          
-            &.top-only {
-                border-radius: ($value * 1px) ($value * 1px) 0 0;
-                border-bottom: none !important;
-            }
-          
-            &.bottom-only {
-                border-radius: 0 0 ($value * 1px) ($value * 1px);
-                border-top: none !important;
+
+.round-corners {
+    // border-radius by default
+    border-radius: ($fib-5 * 1px);
+
+    @mixin round-corners-options {
+        @each $it, $value in $fib {
+            &.fib-#{$it} {
+                border-radius: ($value * 1px);
+
+                &.left-only {
+                    border-radius: ($value * 1px) 0 0 ($value * 1px);
+                    border-right: none !important;
+                }
+            
+                &.right-only {
+                    border-radius: 0 ($value * 1px) ($value * 1px) 0;
+                    border-left: none !important;
+                }
+            
+                &.top-only {
+                    border-radius: ($value * 1px) ($value * 1px) 0 0;
+                    border-bottom: none !important;
+                }
+            
+                &.bottom-only {
+                    border-radius: 0 0 ($value * 1px) ($value * 1px);
+                    border-top: none !important;
+                }
             }
         }
     }
-}
 
-@include rcorner-fib-list;
+    @include round-corners-options;
+}
