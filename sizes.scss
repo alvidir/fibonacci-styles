@@ -12,11 +12,3 @@ $font-sizes: (
 @function get-font-size($size: regular) {
     @return map-get($font-sizes, $size);
 }
-
-@function golden-ratio($size, $opt: asc) {
-    @if $opt == asc or $opt != asc and $opt != des {
-        @return $size * (1 + sqrt(5)) / 2;
-    } @else {
-        @return 2 * $size / (1 + sqrt(5));
-    }
-}
