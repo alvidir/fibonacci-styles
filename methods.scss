@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @function fib($it, $unit: 1) {
     $f: 0;
     
@@ -21,7 +23,7 @@
     $x1: $x0;
    
     @for $i from 1 through 10 {
-      $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+      $x1: math.div($x0 - ($x0 * $x0 - abs($r)), (2 * $x0));
       $x0: $x1;
     }
    
@@ -30,9 +32,9 @@
 
 @function golden-ratio($size, $opt: asc) {
     @if $opt == asc or $opt != asc and $opt != des {
-        @return $size * (1 + sqrt(5)) / 2;
+        @return math.div($size * (1 + sqrt(5)), 2);
     } @else {
-        @return 2 * $size / (1 + sqrt(5));
+        @return math.div(2 * $size, (1 + sqrt(5)));
     }
 }
 
