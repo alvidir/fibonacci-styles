@@ -6,7 +6,7 @@
     $f1: 0;
     $f2: 1;
     @if $it < 2 {
-        @return $f
+        @return $f1
     };
 
     @for $i from 1 through $it {
@@ -16,28 +16,4 @@
     }
 
     @return $f * $unit;
-}
-
-@function sqrt($r) {
-    $x0: 1;
-    $x1: $x0;
-   
-    @for $i from 1 through 10 {
-      $x1: $x0 - math.div(($x0 * $x0 - abs($r)), 2 * $x0);
-      $x0: $x1;
-    }
-   
-    @return $x1;
-}
-
-@function golden-ratio($size, $opt: asc) {
-    @if $opt == asc or $opt != asc and $opt != des {
-        @return math.div($size * (1 + sqrt(5)), 2);
-    } @else {
-        @return math.div(2 * $size, 1 + sqrt(5));
-    }
-}
-
-@function blend($red, $green, $blue) {
-    @return rgb(red($red), green($green), blue($blue));
 }

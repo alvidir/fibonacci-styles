@@ -1,6 +1,6 @@
 {
   "name": "fibonacci-styles",
-  "version": "1.1.6",
+  "version": "2.0.0",
   "description": "A set of scss styles that obey the fibonacci's succession",
   "main": "index.scss",
   "scripts": {
