@@ -14,8 +14,7 @@
     "fibonacci",
     "styles",
     "scss",
-    "colors",
-    "ratios"
+    "themes"
   ],
   "author": "Hector Morales Carnice",
   "license": "MIT",
