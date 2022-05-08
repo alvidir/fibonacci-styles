@@ -1,6 +1,7 @@
 const THEME_LIGHT = "theme-light";
 const THEME_DARK = "theme-dark";
 const THEME_STORAGE_KEY = "theme";
+const THEME_LIST = [THEME_LIGHT, THEME_DARK];
 
 function GetDefaultTheme(localStorageKey: string = THEME_STORAGE_KEY): string {
     const setLightTheme = (): string => {
@@ -27,9 +28,18 @@ function GetDefaultTheme(localStorageKey: string = THEME_STORAGE_KEY): string {
     }
 }
 
+function SwitchTheme(current: string, localStorageKey: string = THEME_STORAGE_KEY): string {
+    const next = THEME_LIST[(THEME_LIST.indexOf(current) + 1) % THEME_LIST.length];
+    document.getElementsByTagName('body')[0].classList.replace(current, next);
+    localStorage.setItem(localStorageKey, next);
+    return next;
+}
+
 export {
     THEME_LIGHT,
     THEME_DARK,
     THEME_STORAGE_KEY,
+    THEME_LIST,
     GetDefaultTheme,
+    SwitchTheme,
 }
