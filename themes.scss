@@ -1,22 +1,24 @@
 .theme-light {
     --color-accent: #816fbe;
-    --color-background-primary: #F8F9FA;
+    --color-background-primary: #F4F6F7;
     --color-background-secondary: #E9ECEF;
-    --color-background-disabled: #DEE2E6;
+    --color-background-tertiary: #DEE2E6;
+    --color-background-disabled: #CED4DA;
     --color-green: #6AB889;
     --color-red: #E3757F;
     --color-text: #111315;
     --color-secondary-text: #495057;
     --color-text-disabled: #ADB5BD;
-    --color-button: #FEFEFE;
+    --color-button: #F4F6F7;
     --color-scrollbar: #CED4DA;
-    --color-scrollbar-hover: #DEE2E6;
+    --color-scrollbar-hover: #BEC5CC;
 }
 
 .theme-dark {
     --color-accent: #A293CB;
     --color-background-primary: #212529;
     --color-background-secondary: #191C1F;
+    --color-background-tertiary: #111315;
     --color-background-disabled: #343A40;
     --color-green: #6AB889;
     --color-red: #E3757F;
