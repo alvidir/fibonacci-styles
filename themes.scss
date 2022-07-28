@@ -2,7 +2,7 @@
     --color-accent: #816fbe;
     --color-background-primary: #F4F6F7;
     --color-background-secondary: #E9ECEF;
-    --color-background-tertiary: #FAFBFB;
+    --color-background-tertiary: #FAFBFC; 
     --color-background-disabled: #DEE2E6;
     --color-green: #6AB889;
     --color-red: #E3757F;
@@ -10,12 +10,14 @@
     --color-secondary-text: #495057;
     --color-text-disabled: #ADB5BD;
     --color-button: #F4F6F7;
+    --color-button-hover: #E9ECEF;
+    --color-button-active: #DEE2E6;
     --color-scrollbar: #CED4DA;
-    --color-scrollbar-hover: #DEE2E6;
+    --color-scrollbar-hover: #BEC5CC;
 }
 
 .theme-dark {
-    --color-accent: #A293CB;
+    --color-accent: #816fbe; //A293CB;
     --color-background-primary: #191C1F;
     --color-background-secondary: #111315;
     --color-background-tertiary: #090A0B;
@@ -25,7 +27,9 @@
     --color-text: #CED4DA;
     --color-secondary-text: #ADB5BD;
     --color-text-disabled: #343A40;
-    --color-button: #495057;
+    --color-button: #191C1F;
+    --color-button-hover: #212529;
+    --color-button-active: #343A40;
     --color-scrollbar: #343A40;
     --color-scrollbar-hover: #495057;
 }
