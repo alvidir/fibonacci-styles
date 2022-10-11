@@ -37,4 +37,7 @@ $fib: (
     14: $fib-14,
     15: $fib-15,
     16: $fib-16,
-)
+);
+
+$fib-radius: $fib-5 * 1px;
+$fib-fontsize: 14px;
