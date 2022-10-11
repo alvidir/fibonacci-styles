@@ -1,8 +1,29 @@
 @import "units.scss";
 
+$fib-radius: $fib-5 * 1px !default;
+
 .round-corners {
-    // border-radius by default
-    border-radius: $fib-5 * 1px;
+    border-radius: $fib-radius;
+
+    &.left-only {
+        border-radius: $fib-radius 0 0 $fib-radius;
+        border-right: none !important;
+    }
+
+    &.right-only {
+        border-radius: 0 $fib-radius $fib-radius 0;
+        border-left: none !important;
+    }
+
+    &.top-only {
+        border-radius: $fib-radius $fib-radius 0 0;
+        border-bottom: none !important;
+    }
+
+    &.bottom-only {
+        border-radius: 0 0 $fib-radius $fib-radius;
+        border-top: none !important;
+    }
 
     @mixin round-corners-options {
         @each $it, $value in $fib {
