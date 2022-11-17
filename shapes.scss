@@ -54,12 +54,12 @@
     @include round-corners-options;
 }
 
-// .shadow-box {
-//     $shift: $fib-1 * 1px;
-//     $blur: $fib-5 * 1px;
-//     $opacity: $fib-3 * 0.1;
+.shadow-box {
+    $shift: $fib-2 * 1px;
+    $blur: $fib-3 * 1px;
+    $opacity: $fib-3 * 0.1;
     
-//     -webkit-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity);
-//     -moz-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity);
-//     box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity);
-// }
+    -webkit-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
+    -moz-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
+    box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
+}
