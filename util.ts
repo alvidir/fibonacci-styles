@@ -1,25 +1,26 @@
-const THEME_LIGHT = "theme-light";
-const THEME_DARK = "theme-dark";
-const THEME_STORAGE_KEY = "theme";
-const THEME_LIST = [THEME_LIGHT, THEME_DARK];
+const THEME_KEY = "theme";
+const THEME_LIGHT_KEY = "theme-light";
+const THEME_DARK_KEY = "theme-dark";
 
-function GetDefaultTheme(localStorageKey: string = THEME_STORAGE_KEY): string {
+const THEME_LIST = [THEME_LIGHT_KEY, THEME_DARK_KEY];
+
+function GetDefaultTheme(localStorageKey: string = THEME_KEY): string {
     const setLightTheme = (): string => {
         document.getElementsByTagName('body')[0].classList.add('theme-light');
-        localStorage.setItem(localStorageKey, THEME_LIGHT);
-        return THEME_LIGHT;
+        localStorage.setItem(localStorageKey, THEME_LIGHT_KEY);
+        return THEME_LIGHT_KEY;
     }
 
     const setDarkTheme = (): string => {
         document.getElementsByTagName('body')[0].classList.add('theme-dark');
-        localStorage.setItem(localStorageKey, THEME_DARK);
-        return THEME_DARK;
+        localStorage.setItem(localStorageKey, THEME_DARK_KEY);
+        return THEME_DARK_KEY;
     }
 
     var localTheme = localStorage.getItem(localStorageKey);
-    if (localTheme === THEME_LIGHT) {
+    if (localTheme === THEME_LIGHT_KEY) {
         return setLightTheme();
-    } else if (localTheme === THEME_DARK) {
+    } else if (localTheme === THEME_DARK_KEY) {
         return setDarkTheme();
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         return setDarkTheme();
@@ -28,7 +29,8 @@ function GetDefaultTheme(localStorageKey: string = THEME_STORAGE_KEY): string {
     }
 }
 
-function SwitchTheme(current: string, localStorageKey: string = THEME_STORAGE_KEY): string {
+function SwitchTheme(localStorageKey: string = THEME_KEY): string {
+    const current = localStorage.getItem(localStorageKey)?? GetDefaultTheme(localStorageKey);
     const next = THEME_LIST[(THEME_LIST.indexOf(current) + 1) % THEME_LIST.length];
     document.getElementsByTagName('body')[0].classList.replace(current, next);
     localStorage.setItem(localStorageKey, next);
@@ -36,9 +38,9 @@ function SwitchTheme(current: string, localStorageKey: string = THEME_STORAGE_KE
 }
 
 export {
-    THEME_LIGHT,
-    THEME_DARK,
-    THEME_STORAGE_KEY,
+    THEME_KEY,
+    THEME_LIGHT_KEY,
+    THEME_DARK_KEY,
     THEME_LIST,
     GetDefaultTheme,
     SwitchTheme,

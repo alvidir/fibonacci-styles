@@ -1,4 +1,4 @@
-.theme-common {
+.common-palette {
     --color-accent: #816fbe;
     --color-green: #6AB889;
     --color-red: #E3757F;
@@ -6,37 +6,61 @@
 }
 
 .theme-light {
-    @extend .theme-common;
+    // master palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-111315
+    // notation: from left (0) to right (9)
 
-    --color-background-primary: #F8F9FA;
-    --color-background-secondary: #E9ECEF;
-    --color-background-disabled: #DEE2E6;
-    --color-background-highlight: #EAE8F3;
-    --color-background-active: #CCC6E4;
-    --color-text: #111315;
-    --color-secondary-text: #6a7179;
-    --color-text-disabled: #ADB5BD;
-    --color-button: #F8F9FA;
-    --color-button-hover: #E9ECEF;
-    --color-button-active: #DEE2E6;
-    --color-scrollbar: #CED4DA;
-    --color-scrollbar-hover: #BEC5CC;
+    @extend .common-palette;
+
+    --color-bg-primary: #F8F9FA;            // 0
+    --color-bg-secondary: #E9ECEF;          // 1
+    --color-bg-disabled: #DEE2E6;           // 2
+    --color-bg-highlight: #EAE8F3;          // x - colorized
+    --color-bg-active: #CCC6E4;             // x - colorized
+
+    --color-text-primary: #191C1F;          // 9
+    --color-text-secondary: #343A40;        // 7
+    --color-text-disabled: #6C757D;         // 5
+
+    --color-button: #F8F9FA;                // 0
+    --color-button-hover: #E9ECEF;          // 1
+    --color-button-active: #F8F9FA;         // 0
+    --color-button-disabled: #E9ECEF;       // 1
+
+    --color-border: #ADB5BD;                // 4
+    --color-border-hover: #ADB5BD;          // 4
+    --color-border-active: #CED4DA;         // 3
+    --color-border-disabled: #CED4DA;       // 3
+
+    --color-scrollbar: #CED4DA;             // 3
+    --color-scrollbar-hover: #DEE2E6;       // 2
 }
 
 .theme-dark {
-    @extend .theme-common;
+    // master palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-111315
+    // notation: from right (0) to left (9) 
     
-    --color-background-primary: #191C1F;
-    --color-background-secondary: #111315;
-    --color-background-disabled: #15181A;
-    --color-background-highlight: #212529;
-    --color-background-active: #343A40;
-    --color-text: #CED4DA;
-    --color-secondary-text: #6a7179;
-    --color-text-disabled: #2B3035;
-    --color-button: #191C1F;
-    --color-button-hover: #212529;
-    --color-button-active: #343A40;
+    @extend .common-palette;
+    
+    --color-bg-primary: #15181A;            // 1
+    --color-bg-secondary: #111315;          // 0
+    --color-bg-disabled: #191C1F;           // 2
+    --color-bg-highlight: #212529;          // 3
+    --color-bg-active: #343A40;             // 4
+
+    --color-text-primary: #DEE2E6;          // 9
+    --color-text-secondary: #ADB5BD;        // 7
+    --color-text-disabled: #495057;         // 5
+
+    --color-button: #15181A;                // 1
+    --color-button-hover: #191C1F;          // 2
+    --color-button-active: #212529;         // 3
+    --color-button-disabled: #111315;       // 0
+
+    --color-border: #343A40;                // 4
+    --color-border-hover: #495057;          // 5
+    --color-border-active: #495057;         // 5
+    --color-border-disabled: #212529;       // 3
+
     --color-scrollbar: #343A40;
     --color-scrollbar-hover: #495057;
 }
