@@ -1,19 +1,19 @@
 @use "sass:math";
 
 @function fib($it, $unit: 1) {
-    $f: 0;
-    
-    $f1: 0;
-    $f2: 1;
-    @if $it < 2 {
-        @return $f1
-    };
+  $f: 0;
 
-    @for $i from 1 through $it {
-        $f: $f1 + $f2 !global;
-        $f1: $f2 !global;
-        $f2: $f !global;
-    }
+  $f1: 0;
+  $f2: 1;
+  @if $it < 2 {
+    @return $f1;
+  }
 
-    @return $f * $unit;
+  @for $i from 1 through $it {
+    $f: $f1 + $f2 !global;
+    $f1: $f2 !global;
+    $f2: $f !global;
+  }
+
+  @return $f * $unit;
 }

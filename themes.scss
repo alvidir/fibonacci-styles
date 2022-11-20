@@ -1,66 +1,66 @@
 .common-palette {
-    --color-accent: #816fbe;
-    --color-green: #6AB889;
-    --color-red: #E3757F;
-    --color-white: #F8F9FA;
+  --color-accent: #816fbe;
+  --color-green: #6ab889;
+  --color-red: #e3757f;
+  --color-white: #f8f9fa;
 }
 
 .theme-light {
-    // master palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-111315
-    // notation: from left (0) to right (9)
+  // master palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-111315
+  // notation: from left (0) to right (9)
 
-    @extend .common-palette;
+  @extend .common-palette;
 
-    --color-bg-primary: #F8F9FA;            // 0
-    --color-bg-secondary: #E9ECEF;          // 1
-    --color-bg-disabled: #DEE2E6;           // 2
-    --color-bg-highlight: #EAE8F3;          // x - colorized
-    --color-bg-active: #CCC6E4;             // x - colorized
+  --color-bg-primary: #f8f9fa; // 0
+  --color-bg-secondary: #e9ecef; // 1
+  --color-bg-disabled: #dee2e6; // 2
+  --color-bg-highlight: #eae8f3; // x - colorized
+  --color-bg-active: #ccc6e4; // x - colorized
 
-    --color-text-primary: #111315;          // 9
-    --color-text-secondary: #495057;        // 6
-    --color-text-disabled: #CED4DA;         // 3
+  --color-text-primary: #111315; // 9
+  --color-text-secondary: #495057; // 6
+  --color-text-disabled: #ced4da; // 3
 
-    --color-button: #F8F9FA;                // 0
-    --color-button-hover: #E9ECEF;          // 1
-    --color-button-active: #F8F9FA;         // 0
-    --color-button-disabled: #E9ECEF;       // 1
+  --color-button: #f8f9fa; // 0
+  --color-button-hover: #e9ecef; // 1
+  --color-button-active: #f8f9fa; // 0
+  --color-button-disabled: #e9ecef; // 1
 
-    --color-border: #ADB5BD;                // 4
-    --color-border-hover: #ADB5BD;          // 4
-    --color-border-active: #CED4DA;         // 3
-    --color-border-disabled: #CED4DA;       // 3
+  --color-border: #adb5bd; // 4
+  --color-border-hover: #adb5bd; // 4
+  --color-border-active: #ced4da; // 3
+  --color-border-disabled: #ced4da; // 3
 
-    --color-scrollbar: #CED4DA;             // 3
-    --color-scrollbar-hover: #ADB5BD;       // 4
+  --color-scrollbar: #ced4da; // 3
+  --color-scrollbar-hover: #adb5bd; // 4
 }
 
 .theme-dark {
-    // master palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-111315
-    // notation: from right (0) to left (9) 
-    
-    @extend .common-palette;
-    
-    --color-bg-primary: #15181A;            // 1
-    --color-bg-secondary: #111315;          // 0
-    --color-bg-disabled: #191C1F;           // 2
-    --color-bg-highlight: #212529;          // 3
-    --color-bg-active: #343A40;             // 4
+  // master palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-111315
+  // notation: from right (0) to left (9)
 
-    --color-text-primary: #DEE2E6;          // 9
-    --color-text-secondary: #6C757D;        // 6
-    --color-text-disabled: #212529;         // 3
+  @extend .common-palette;
 
-    --color-button: #15181A;                // 1
-    --color-button-hover: #191C1F;          // 2
-    --color-button-active: #212529;         // 3
-    --color-button-disabled: #111315;       // 0
+  --color-bg-primary: #15181a; // 1
+  --color-bg-secondary: #111315; // 0
+  --color-bg-disabled: #191c1f; // 2
+  --color-bg-highlight: #212529; // 3
+  --color-bg-active: #343a40; // 4
 
-    --color-border: #343A40;                // 4
-    --color-border-hover: #495057;          // 5
-    --color-border-active: #495057;         // 5
-    --color-border-disabled: #212529;       // 3
+  --color-text-primary: #dee2e6; // 9
+  --color-text-secondary: #6c757d; // 6
+  --color-text-disabled: #212529; // 3
 
-    --color-scrollbar: #343A40;             // 4
-    --color-scrollbar-hover: #495057;       // 5
+  --color-button: #15181a; // 1
+  --color-button-hover: #191c1f; // 2
+  --color-button-active: #212529; // 3
+  --color-button-disabled: #111315; // 0
+
+  --color-border: #343a40; // 4
+  --color-border-hover: #495057; // 5
+  --color-border-active: #495057; // 5
+  --color-border-disabled: #212529; // 3
+
+  --color-scrollbar: #343a40; // 4
+  --color-scrollbar-hover: #495057; // 5
 }

@@ -1,65 +1,73 @@
 @import "units.scss";
 
 .round-corners {
-    border-radius: $default-radius;
+  border-radius: $default-radius;
 
-    &.left-only {
-        border-radius: $default-radius 0 0 $default-radius;
-        border-right: none !important;
-    }
+  &.left-only {
+    border-radius: $default-radius 0 0 $default-radius;
+    border-right: none !important;
+  }
 
-    &.right-only {
-        border-radius: 0 $default-radius $default-radius 0;
-        border-left: none !important;
-    }
+  &.right-only {
+    border-radius: 0 $default-radius $default-radius 0;
+    border-left: none !important;
+  }
 
-    &.top-only {
-        border-radius: $default-radius $default-radius 0 0;
-        border-bottom: none !important;
-    }
+  &.top-only {
+    border-radius: $default-radius $default-radius 0 0;
+    border-bottom: none !important;
+  }
 
-    &.bottom-only {
-        border-radius: 0 0 $default-radius $default-radius;
-        border-top: none !important;
-    }
+  &.bottom-only {
+    border-radius: 0 0 $default-radius $default-radius;
+    border-top: none !important;
+  }
 
-    @mixin round-corners-options {
-        @each $it, $value in $fib {
-            &.fib-#{$it} {
-                border-radius: ($value * 1px);
+  @mixin round-corners-options {
+    @each $it, $value in $fib {
+      &.fib-#{$it} {
+        border-radius: ($value * 1px);
 
-                &.left-only {
-                    border-radius: ($value * 1px) 0 0 ($value * 1px);
-                    border-right: none !important;
-                }
-            
-                &.right-only {
-                    border-radius: 0 ($value * 1px) ($value * 1px) 0;
-                    border-left: none !important;
-                }
-            
-                &.top-only {
-                    border-radius: ($value * 1px) ($value * 1px) 0 0;
-                    border-bottom: none !important;
-                }
-            
-                &.bottom-only {
-                    border-radius: 0 0 ($value * 1px) ($value * 1px);
-                    border-top: none !important;
-                }
-            }
+        &.left-only {
+          border-radius: ($value * 1px) 0 0 ($value * 1px);
+          border-right: none !important;
         }
-    }
 
-    @include round-corners-options;
+        &.right-only {
+          border-radius: 0 ($value * 1px) ($value * 1px) 0;
+          border-left: none !important;
+        }
+
+        &.top-only {
+          border-radius: ($value * 1px) ($value * 1px) 0 0;
+          border-bottom: none !important;
+        }
+
+        &.bottom-only {
+          border-radius: 0 0 ($value * 1px) ($value * 1px);
+          border-top: none !important;
+        }
+      }
+    }
+  }
+
+  @include round-corners-options;
 }
 
 .shadow-box {
-    $shift: $fib-2 * 1px;
-    $blur: $fib-3 * 1px;
-    $opacity: $fib-3 * 0.1;
-    
-    -webkit-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
-    -moz-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
-    box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
+  $shift: $fib-2 * 1px;
+  $blur: $fib-3 * 1px;
+  $opacity: $fib-3 * 0.1;
+
+  -webkit-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
+  -moz-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
+  box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
+}
+
+a {
+  color: var(--color-accent);
+
+  &:not(:hover) {
+    text-decoration: none;
+  }
 }
