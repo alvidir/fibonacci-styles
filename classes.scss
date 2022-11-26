@@ -55,8 +55,8 @@
 }
 
 .shadow-box {
-  $shift: $fib-2 * 1px;
-  $blur: $fib-3 * 1px;
+  $shift: $fib-1 * 1px;
+  $blur: $fib-5 * 1px;
   $opacity: $fib-3 * 0.1;
 
   -webkit-box-shadow: 0px $shift $blur 0px rgba(0, 0, 0, $opacity) !important;
