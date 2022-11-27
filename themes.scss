@@ -36,14 +36,14 @@
 }
 
 .theme-dark {
-  // master palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-111315
+  // master palette: https://coolors.co/dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-1b1e21-15181a-0f1113
   // notation: from right (0) to left (9)
 
   @extend .common-palette;
 
   --color-bg-primary: #15181a; // 1
-  --color-bg-secondary: #111315; // 0
-  --color-bg-disabled: #191c1f; // 2
+  --color-bg-secondary: #0f1113; // 0
+  --color-bg-disabled: #1b1e21; // 2
   --color-bg-highlight: #212529; // 3
   --color-bg-active: #343a40; // 4
 
@@ -52,9 +52,9 @@
   --color-text-disabled: #212529; // 3
 
   --color-button: #15181a; // 1
-  --color-button-hover: #191c1f; // 2
+  --color-button-hover: #1b1e21; // 2
   --color-button-active: #212529; // 3
-  --color-button-disabled: #111315; // 0
+  --color-button-disabled: #0f1113; // 0
 
   --color-border: #343a40; // 4
   --color-border-hover: #495057; // 5
