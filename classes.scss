@@ -1,25 +1,25 @@
 @import "units.scss";
 
 .round-corners {
-  border-radius: $default-radius;
+  border-radius: $radius;
 
   &.left-only {
-    border-radius: $default-radius 0 0 $default-radius;
+    border-radius: $radius 0 0 $radius;
     border-right: none !important;
   }
 
   &.right-only {
-    border-radius: 0 $default-radius $default-radius 0;
+    border-radius: 0 $radius $radius 0;
     border-left: none !important;
   }
 
   &.top-only {
-    border-radius: $default-radius $default-radius 0 0;
+    border-radius: $radius $radius 0 0;
     border-bottom: none !important;
   }
 
   &.bottom-only {
-    border-radius: 0 0 $default-radius $default-radius;
+    border-radius: 0 0 $radius $radius;
     border-top: none !important;
   }
 
