@@ -1,58 +1,52 @@
 @import "units.scss";
 
-.round-corners {
-  border-radius: $radius;
-
-  &.left-only {
-    border-radius: $radius 0 0 $radius;
-    border-right: none !important;
+@mixin round-corners-options {
+  .round-corners {
+    @extend .round-corners-fib-5;
   }
 
-  &.right-only {
-    border-radius: 0 $radius $radius 0;
-    border-left: none !important;
-  }
+  @each $it, $value in $fib {
+    .round-corners-fib-#{$it} {
+      border-radius: ($value * 1px);
 
-  &.top-only {
-    border-radius: $radius $radius 0 0;
-    border-bottom: none !important;
-  }
+      &.left-only {
+        border-radius: ($value * 1px) 0 0 ($value * 1px);
+        border-right: none !important;
+      }
 
-  &.bottom-only {
-    border-radius: 0 0 $radius $radius;
-    border-top: none !important;
-  }
+      &.right-only {
+        border-radius: 0 ($value * 1px) ($value * 1px) 0;
+        border-left: none !important;
+      }
 
-  @mixin round-corners-options {
-    @each $it, $value in $fib {
-      &.fib-#{$it} {
-        border-radius: ($value * 1px);
+      &.top-only {
+        border-radius: ($value * 1px) ($value * 1px) 0 0;
+        border-bottom: none !important;
+      }
 
-        &.left-only {
-          border-radius: ($value * 1px) 0 0 ($value * 1px);
-          border-right: none !important;
-        }
-
-        &.right-only {
-          border-radius: 0 ($value * 1px) ($value * 1px) 0;
-          border-left: none !important;
-        }
-
-        &.top-only {
-          border-radius: ($value * 1px) ($value * 1px) 0 0;
-          border-bottom: none !important;
-        }
-
-        &.bottom-only {
-          border-radius: 0 0 ($value * 1px) ($value * 1px);
-          border-top: none !important;
-        }
+      &.bottom-only {
+        border-radius: 0 0 ($value * 1px) ($value * 1px);
+        border-top: none !important;
       }
     }
   }
-
-  @include round-corners-options;
 }
+
+@mixin smooth-options {
+  .smooth {
+    @extend .smooth-fib-7;
+  }
+
+  @each $it, $value in $fib {
+    .smooth-fib-#{$it} {
+      transition-duration: $value * 0.01s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+}
+
+@include round-corners-options;
+@include smooth-options;
 
 .shadow-box {
   $shift: $fib-1 * 1px;
