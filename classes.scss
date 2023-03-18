@@ -32,18 +32,20 @@
   }
 }
 
+$slower-fade: null;
+$medium-fade: null;
 @mixin fade-options {
-  $slower-fade: $fib-7 * 0.01s ease-in-out !global;
+  $slower-fade: $fib-7 * 0.01s ease-in-out;
   .slower-fade {
     @extend .fade-fib-7;
   }
 
-  $medium-fade: $fib-6 * 0.01s ease-in-out !global;
+  $medium-fade: $fib-6 * 0.01s ease-in-out;
   .medium-fade {
     @extend .fade-fib-6;
   }
 
-  $faster-fade: $fib-5 * 0.01s ease-in-out !global;
+  $faster-fade: $fib-5 * 0.01s ease-in-out;
   .faster-fade {
     @extend .fade-fib-5;
   }
