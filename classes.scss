@@ -32,13 +32,24 @@
   }
 }
 
-@mixin smooth-options {
-  .smooth {
-    @extend .smooth-fib-7;
+@mixin fade-options {
+  $slower-fade: $fib-7 * 0.01s ease-in-out !global;
+  .slower-fade {
+    @extend .fade-fib-7;
+  }
+
+  $medium-fade: $fib-6 * 0.01s ease-in-out !global;
+  .medium-fade {
+    @extend .fade-fib-6;
+  }
+
+  $faster-fade: $fib-5 * 0.01s ease-in-out !global;
+  .faster-fade {
+    @extend .fade-fib-5;
   }
 
   @each $it, $value in $fib {
-    .smooth-fib-#{$it} {
+    .fade-fib-#{$it} {
       transition-duration: $value * 0.01s;
       transition-timing-function: ease-in-out;
     }
@@ -46,7 +57,7 @@
 }
 
 @include round-corners-options;
-@include smooth-options;
+@include fade-options;
 
 .shadow-box {
   $shift: $fib-1 * 1px;
