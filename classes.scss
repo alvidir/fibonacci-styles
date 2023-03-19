@@ -32,20 +32,19 @@
   }
 }
 
-$slower-fade: null;
-$medium-fade: null;
+$slower-fade: $fib-7 * 0.01s ease-in-out;
+$medium-fade: $fib-6 * 0.01s ease-in-out;
+$faster-fade: $fib-5 * 0.01s ease-in-out;
+
 @mixin fade-options {
-  $slower-fade: $fib-7 * 0.01s ease-in-out;
   .slower-fade {
     @extend .fade-fib-7;
   }
 
-  $medium-fade: $fib-6 * 0.01s ease-in-out;
   .medium-fade {
     @extend .fade-fib-6;
   }
 
-  $faster-fade: $fib-5 * 0.01s ease-in-out;
   .faster-fade {
     @extend .fade-fib-5;
   }
