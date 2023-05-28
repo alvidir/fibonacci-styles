@@ -7,38 +7,32 @@
 }
 
 .theme-light {
-  // master palette: https://coolors.co/ffe6d9-ffdac6-ffcdb2-ffb4a2-e5989b-b5838d-6d6875-474747-323232-1c1c1c
+  // master palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529-111315
   // notation: from left (0) to right (9)
 
   @extend .common-palette;
 
-  // tone corrections
-  --color-accent: #8c78cf;
-  --color-green: #6ed095;
-  --color-red: #df6b74;
-  --color-yellow: #e0b683;
+  --color-bg-primary: #f8f9fa; // 0
+  --color-bg-secondary: #e9ecef; // 1
+  --color-bg-disabled: #dee2e6; // 2
+  --color-bg-highlight: #b5838d; // x - colorized
 
-  --color-bg-primary: #ffe6d9; // 0
-  --color-bg-secondary: #ffdac6; // 1
-  --color-bg-disabled: #ffcdb2; // 2
-  --color-bg-highlight: #e5989b; // 4
+  --color-text-primary: #111315; // 9
+  --color-text-secondary: #343a40; // 7
+  --color-text-disabled: #6c757d; // 5
 
-  --color-text-primary: #1c1c1c; // 9
-  --color-text-secondary: #474747; // 7
-  --color-text-disabled: #6d6875; // 6
+  --color-button: #f8f9fa; // 0
+  --color-button-hover: #e9ecef; // 1
+  --color-button-active: #e9ecef; // 1
+  --color-button-disabled: #f8f9fa; // 0
 
-  --color-button: #ffe6d9; // 0
-  --color-button-hover: #ffdac6; // 1
-  --color-button-active: #ffdac6; // 1
-  --color-button-disabled: #ffe6d9; // 0
+  --color-border: #ced4da; // 3
+  --color-border-hover: #adb5bd; // 4
+  --color-border-active: #adb5bd; // 4
+  --color-border-disabled: #dee2e6; // 2
 
-  --color-border: #ffc1aa; // 3
-  --color-border-hover: #e5989b; // 4
-  --color-border-active: #e5989b; // 4
-  --color-border-disabled: #ffcdb2; // 2
-
-  --color-scrollbar: #ffc1aa; // 3
-  --color-scrollbar-hover: #e5989b; // 4
+  --color-scrollbar: #ced4da; // 3
+  --color-scrollbar-hover: #adb5bd; // 4
 }
 
 .theme-dark {
