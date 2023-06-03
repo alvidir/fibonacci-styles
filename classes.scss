@@ -61,7 +61,7 @@ $faster-fade: $fib-5 * 0.01s ease-in-out;
 @include fade-options;
 
 .shadow-box {
-  $shift: $fib-1 * 1px;
+  $shift: $fib-3 * 1px;
   $blur: $fib-5 * 1px;
   $opacity: $fib-3 * 0.1;
 
